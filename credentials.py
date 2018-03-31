@@ -40,15 +40,15 @@ class credentials:
             return cls.credentials_list
 
 
-    # @classmethod
-    # def find_by_account_name(cls, name):
-    #     '''
-    #     Method that takes in an account name and returns credentials that match that number
-    #     '''
-    #     for credentials in cls.credentials_list:
-    #         if credentials.account_name == name:
-    #             return credentials
-    #
+    @classmethod
+    def find_by_account_name(cls, name):
+        '''
+        Method that takes in an account name and returns credentials that match that number
+        '''
+        for credentials in cls.credentials_list:
+            if credentials.account_name == name:
+                return credentials
+    
     # @classmethod
     # def copy_username(cls, account):
     #     credentials_found = Credentials.find_by_account_name(account)
