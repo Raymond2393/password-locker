@@ -1,4 +1,4 @@
-class credentials:
+class Credentials:
     '''
     Class that generates new instance of credentials
     '''
@@ -24,7 +24,7 @@ class credentials:
         Credentials.credentials_list.append(self)
 
 
-     def delete_credentials(self):
+    def delete_credentials(self):
         '''
         delete_contact method deletes an object from the credentials_list
         '''
@@ -48,29 +48,29 @@ class credentials:
         for credentials in cls.credentials_list:
             if credentials.account_name == name:
                 return credentials
-    
-    # @classmethod
-    # def copy_username(cls, account):
-    #     credentials_found = Credentials.find_by_account_name(account)
-    #     pyperclip.copy(credentials_found.account_name)
-    #
-    # @classmethod
-    # def generate_password(cls, pasword_length):
-    #     choice_string = "zxcjklqwe!@#123"
-    #     password_generate = ".join(random.sample(choice_string, int(pasword_length)))"
-    #     password = password_generate
-    #     return password
-    #
-    #
-    # @classmethod
-    # def credentials_exist(cls, name):
-    #     '''
-    #     Method that check if the credentials are already on the contact_list
-    #     and return true and false if it exists or not
-    #     '''
-    #
-    #     for credentials in cls.credentials_list:
-    #         if credentials.account_name == name:
-    #             return True
-    #
-    #     return False
+
+    @classmethod
+    def copy_username(cls, account):
+        credentials_found = Credentials.find_by_account_name(account)
+        pyperclip.copy(credentials_found.account_name)
+
+    @classmethod
+    def generate_password(cls, pasword_length):
+        choice_string = "zxcjklqwe!@#123"
+        password_generate = ".join(random.sample(choice_string, int(pasword_length)))"
+        password = password_generate
+        return password
+
+
+    @classmethod
+    def credentials_exist(cls, name):
+        '''
+        Method that check if the credentials are already on the contact_list
+        and return true and false if it exists or not
+        '''
+
+        for credentials in cls.credentials_list:
+            if credentials.account_name == name:
+                return True
+
+        return False
