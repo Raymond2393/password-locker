@@ -66,6 +66,31 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.delete_credentials()
         self.assertEqual(len(Credentials.credentials_list), 1)
 
+    def test_find_credentials_by_account_name(self):
+        '''
+        this will check if we can find a contact by phone number and display
+        information
+        '''
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Facebook", "YMO", "YMOname@gmail", "pass")
+        test_credentials.save_credentials()
+        found_credentials = Credentials.find_by_account_name("Facebook")
+        self.assertEqual(found_credentials.email, test_credentials.email)
+
+    def test_credentials_exist(self):
+        '''
+        Check if a credentials exist and return a boolean
+        '''
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Facebook", "YMO", "YMOname@gmail", "pass")
+        test_credentials.save_credentials()
+        found_credentials = Credentials.find_by_account_name("Facebook")
+        self.assertEqual(found_credentials.email, test_credentials.email)
+
+
+
 
 
 
