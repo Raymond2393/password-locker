@@ -10,8 +10,8 @@ This is an application a user can save passwords for different social media acco
 ## Setup/Installation Requirements
 - Linux
 - Install python3.6 sudo apt-get install python3.6
--Run run.py file to open the programme
--Also requires some external sources like pyperclip 
+- Run run.py file to open the programme
+- Also requires some external sources like pyperclip 
 
 ## Known Bugs
 There are no bugs
