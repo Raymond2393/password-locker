@@ -65,7 +65,7 @@ class TestCredentials(unittest.TestCase):
         '''
 
         self.new_credentials.save_credentials()
-        test_credentials = Credentials("Facebook", "YMO", "YMOname@gmail", "pass")
+        test_credentials = Credentials("Facebook", "YMO", "username@gmail", "pass")
         test_credentials.save_credentials()
         found_credentials = Credentials.find_by_account_name("Facebook")
         self.assertEqual(found_credentials.email, test_credentials.email)
@@ -76,7 +76,7 @@ class TestCredentials(unittest.TestCase):
         '''
 
         self.new_credentials.save_credentials()
-        test_credentials = Credentials("Facebook", "YMO", "YMOname@gmail", "pass")
+        test_credentials = Credentials("Facebook", "YMO", "username@gmail", "pass")
         test_credentials.save_credentials()
         found_credentials = Credentials.find_by_account_name("Facebook")
         self.assertEqual(found_credentials.email, test_credentials.email)
