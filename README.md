@@ -1,7 +1,7 @@
 ### Password Locker
 This is an application a user can save passwords for different social media accounts.
 
-#By Raymond Okwenda
+# By Raymond Okwenda
 
 ### Description
 The password locker app is used to track passwords for various social media accounts.
