@@ -14,7 +14,7 @@ Run run.py file to open the programme
 Also requires some external sources like pyperclip 
 
 ### Known Bugs
-There are noo bugs
+There are no bugs
 
 ### Technologies Used
 python3.6
