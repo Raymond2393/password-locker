@@ -1,3 +1,7 @@
+import pyperclip
+import random
+
+
 class Credentials:
     '''
     Class that generates new instance of credentials
